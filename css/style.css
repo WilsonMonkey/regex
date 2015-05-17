@@ -1,0 +1,68 @@
+@font-face {
+	font-family: Althea;
+	src: url(../fonts/Althea-Regular.ttf);
+}
+
+body {
+	background-color: #6e436e;
+	font-family: Calibri, Arial, Helvetica, sans-serif;
+}
+
+.navbar {
+	background-color: #6e436e !important;
+}
+
+.navbar-brand{
+	font-size: 1.5em;
+	font-family: Althea, serif;
+}
+
+.navbar-inverse .navbar-brand:focus, .navbar-inverse .navbar-brand:hover {
+	opacity: 0.7;
+	background-color: #7a4b7a;
+}
+
+.navbar-nav {
+	float: right;
+	font-size: 1.3em;
+	font-style: normal;
+}
+
+.navbar-nav li:hover, .active {
+	opacity: 0.7;
+	background-color: #7a4b7a;
+}
+
+.navbar a {
+	color: #FBFFB5 !important;
+}
+
+.jumbotron {
+	/*background-color: #faff96;*/
+}
+
+.btn-primary {
+	background-color: #6e436e;
+	border: none;
+	color: #fbffb5;
+}
+
+.btn-primary:hover {
+	background-color: #7a4b7a;
+	color: #fbffb5;
+}
+
+.content {
+	background-color: #FBFFB5;
+	border: 3px solid #FBFFB5;
+	border-radius: 5px;
+}
+
+hr {
+	border-color: #FBFFB5;
+	margin-bottom: 5px;
+}
+
+footer {
+	color: #FBFFB5;
+}
