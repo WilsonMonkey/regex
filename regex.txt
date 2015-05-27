@@ -1,0 +1,82 @@
+Reguläre Ausdrücke
+in thoretischen Informatik und der Formalen Sprachen Therorie
+nach fester syntaktischer reihenfolge von Charateren, sind es Filterkritern für eine Zeichenkette
+Es wird pro chrachter versucht das Filterkriterium beim ersten treffe zurück zu geben, selbst wenn im spätern text noch ein besserer treffer ist
+
+Text-verarbeitungs Programme, Betriebssysteme, und die meinsten gängigen Programmier sprachen haben Regulare Ausdrücke eigentschalften implimentiert
+
+Delimiter: Kennzeichung für den Begin und das Ende des Suchpatterns.
+
+litteral: Ein Chrackter, welcher im suchpattern 1zu1 enthalten ist. ind in Windows
+
+metacharacter: ist ein Chrackter mit welcher für das computer programm eine bestimmt bedeutung hat.
+
+operatoren: Alternative, Verkettung, Wiederholung
+
+target String: das ist der zu durchsuchende String
+
+search expression: Dieses beinhaltet das Suchpattern
+
+escape sequence: Hier wird mit hilfe des backschlashes kann man dem computer programm mitteilen, das dieser dahinter angegebende metachracter nun ein litteraler Chrachter ist.
+
+character set: 
+möglichkeit zum finden eines suchpattern in den viereckigen Klammer z.B. [0-9]. 
+Man kann auch metacharctere dort angeben ohne sie extra mit backslash zu ascapen.
+Man kann mit wiederholungen arbeiten 
+
+Funktion es werden zuerst die literalen angaben versucht zu matchen und danach alle otionalen 
+Beispiel gr[ae]y suche nach gr dann die default annahme von option 1 (a) und die suche geht weiter mit y
+
+chrackter class:
+abkürzungen von wörten wie [0-9] = \d
+
+
+back references: ist mit hifle vom backshlash und der nummer einen match gruppe sich zurück gebne zu lassen. Zu beispiel sinnvoll bei einem grey mit a oder e. Wenn das mehrmals ausgegeben werden soll muss man das nur einmal prüfen. oder HTML TAGS
+
+lookback und lookbefore: nach dem die beeding der suche matches wird vor oder zurückguckt und ob dort eine weitere filterung zutrifft, welche aber nicht in dem matching sein soll.
+
+History
+erstmals 1956 beim Mathematiker Stephen Kleene. Er benutze eine Notation die er "reguläre Mengen" nannte
+Diese bekamen ausmerksamkeit in der Therotischen Informatiker und im Zusammenhang der formalen Sprache
+1968 berühmtere Nutzung einmal in dem Text Editor und als lexical analysis in einem Konmplier.
+Eine der ersten Nutzung in einem Programm waren von Ken Thopson in dem QED Editor um somit einen Text schnell filtern zu können. /g<regular expression>/p g = global p = print
+Er hat diese Funktion dem Unix ed editor hinzugefügt, aus dem sich der heute bekannte grep (Global search for Regular Expression and Print matching lines) Suchtool sich entwickelte.
+
+in der Unix umgebeung sind danach mehr und mehr nach eine STDANDART
+
+1980 entwickung der ersten perl regex expression 
+
+1997 PCRE entwichkung 
+
+POSIX vs PCRE
+
+POSIX (Portable Operating System Interface):
+last Version POSIX.1-2008 (with one TC)
+find longest (best) match
+IEEE Standard in combination with the unix group
+no liberary needed to install
+
+PCRE (Perl Compatible Regular Expressions):
+written in C 
+default no Unicode Support
+Searchpattern must be in delimiters
+No case-sitive funktion only constant
+
+
+Quellen:
+http://en.wikipedia.org/wiki/Regular_expression#Patterns_for_non-regular_languages
+http://www.regular-expressions.info
+http://www.zytrax.com/tech/web/regex.htm
+https://msdn.microsoft.com/de-de/library/hs600312%28v=vs.110%29.aspx?cs-save-lang=1&cs-lang=vb#code-snippet-1
+http://de.wikipedia.org/wiki/Regul%C3%A4rer_Ausdruck
+http://de.wikipedia.org/wiki/Endlicher_Automat
+http://de.wikipedia.org/wiki/Chomsky-Hierarchie
+http://de.wikipedia.org/wiki/Portable_Operating_System_Interface
+http://en.wikipedia.org/wiki/POSIX
+http://www.infoq.com/presentations/regex
+http://php.net/manual/de/reference.pcre.pattern.posix.php
+http://www.php-resource.de/handbuch/reference.pcre.pattern.posix.htm
+http://php.net/manual/de/regexp.introduction.php
+http://de.wikipedia.org/wiki/Perl_Compatible_Regular_Expressions
+http://en.wikipedia.org/wiki/Perl_Compatible_Regular_Expressions
+https://www.youtube.com/watch?v=6t4rM7NC1Y8
