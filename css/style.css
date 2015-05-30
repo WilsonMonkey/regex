@@ -67,3 +67,43 @@ hr {
 footer {
 	color: #FBFFB5;
 }
+
+/* Grundlagen */
+
+#search-example-carousel .carousel-indicators li {
+	background-color: #7A4B7A;
+}
+
+#search-example-carousel .carousel-indicators .active {
+	background-color: #FBFFB5;
+}
+
+#search-example-carousel .item.active {
+	opacity: 1;
+}
+
+#search-example-carousel .item .carousel-caption {
+	top: 20px;
+}
+
+#search-example-carousel .item .carousel-caption .content {
+	color: #7a4b7a;
+	padding: 20px;
+	font-size: 20px;
+	text-shadow: none;
+}
+
+#search-example-carousel .carousel-control {
+	background-image: none;
+}
+
+#search-example-carousel .carousel-control span {
+	color: #7a4b7a;
+}
+
+#search-example-carousel .list-group {
+	display: none;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
