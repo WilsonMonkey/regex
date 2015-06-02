@@ -37,24 +37,405 @@
 <!-- Main jumbotron for a primary marketing message or call to action -->
 <div class="jumbotron">
 	<div class="container">
-		<h1>Hello, world!</h1>
-		<p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+		<h1>Syntax</h1>
+		<p>Durch die folgenden Syntaxelemente können komplexe Ausdrücke als Suchmuster definiert werden.</p>
 	</div>
 </div>
 
 <div class="container">
 	<section class="content">
-		<p>Hier kommt content hin!</p>
+
+		<!-- Ranges -->
+		<div class="panel panel-default cheat-sheet-box">
+			<div class="panel-heading">
+				Ranges
+			</div>
+			<table class="table table-striped">
+				<tbody>
+				<tr>
+					<td>
+						.
+					</td>
+					<td>
+						Jedes Zeichen außer Zeilenumbruch
+					</td>
+				</tr>
+				<tr>
+					<td>
+						(a|b)
+					</td>
+					<td>
+						a oder b
+					</td>
+				</tr>
+				<tr>
+					<td>
+						(...)
+					</td>
+					<td>
+						Gruppe
+					</td>
+				</tr>
+				<tr>
+					<td>
+						[abc]
+					</td>
+					<td>
+						Range (a oder b oder c)
+					</td>
+				</tr>
+				<tr>
+					<td>
+						[^abc]
+					</td>
+					<td>
+						Nicht a oder b oder c
+					</td>
+				</tr>
+				<tr>
+					<td>
+						[a-f]
+					</td>
+					<td>
+						Buchstaben zwischen a und f
+					</td>
+				</tr>
+				<tr>
+					<td>
+						[A-F]
+					</td>
+					<td>
+						Buchstaben zwischen A und F
+					</td>
+				</tr>
+				<tr>
+					<td>
+						[0-5]
+					</td>
+					<td>
+						Ziffer zwischen 0 und 5
+					</td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<!-- Anchors -->
+			<div class="panel panel-default cheat-sheet-box">
+				<div class="panel-heading">
+					Anchors
+				</div>
+				<table class="table table-striped">
+					<tbody>
+						<tr>
+							<td>
+								^
+							</td>
+							<td>
+								Zeilenanfang
+							</td>
+						</tr>
+						<tr>
+							<td>
+								$
+							</td>
+							<td>
+								Ende einer Zeile
+							</td>
+						</tr>
+						<tr>
+							<td>
+								\A
+							</td>
+							<td>
+								Ende einer Zeile
+							</td>
+						</tr>
+						<tr>
+							<td>
+								\Z
+							</td>
+							<td>
+								Ende einer Zeichenkette
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+		<!-- Character Classes -->
+		<div class="panel panel-default cheat-sheet-box">
+			<div class="panel-heading">
+				Zeichenklassen
+			</div>
+			<table class="table table-striped">
+				<tbody>
+				<tr>
+					<td>
+						\s
+					</td>
+					<td>
+						Leerzeichen
+					</td>
+				</tr>
+				<tr>
+					<td>
+						\S
+					</td>
+					<td>
+						Kein Leerzeichen
+					</td>
+				</tr>
+				<tr>
+					<td>
+						\d
+					</td>
+					<td>
+						Kein Leerzeichen
+					</td>
+				</tr>
+				<tr>
+					<td>
+						\w
+					</td>
+					<td>
+						Wort (Buchstaben, Zahlen und Underscore)
+					</td>
+				</tr>
+				<tr>
+					<td>
+						\W
+					</td>
+					<td>
+						Kein Wort
+					</td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<!-- Quantifiers -->
+		<div class="panel panel-default cheat-sheet-box">
+			<div class="panel-heading">
+				Quantifiers
+			</div>
+			<table class="table table-striped">
+				<tbody>
+				<tr>
+					<td>
+						*
+					</td>
+					<td>
+						0 oder mehr
+					</td>
+				</tr>
+				<tr>
+					<td>
+						?
+					</td>
+					<td>
+						0 oder 1
+					</td>
+				</tr>
+				<tr>
+					<td>
+						+
+					</td>
+					<td>
+						1 oder mehr
+					</td>
+				</tr>
+				<tr>
+					<td>
+						{7}
+					</td>
+					<td>
+						1 oder mehr
+					</td>
+				</tr>
+				<tr>
+					<td>
+						{3,7}
+					</td>
+					<td>
+						zwischen 3 und 7
+					</td>
+				</tr>
+				<tr>
+					<td>
+						{7,}
+					</td>
+					<td>
+						7 oder mehr
+					</td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<!-- Assertions -->
+		<div class="panel panel-default cheat-sheet-box">
+			<div class="panel-heading">
+				Assertions
+			</div>
+			<table class="table table-striped">
+				<tbody>
+				<tr>
+					<td>
+						?=
+					</td>
+					<td>
+						Lookahead assertions
+					</td>
+				</tr>
+				<tr>
+					<td>
+						?!
+					</td>
+					<td>
+						Negative lookahead
+					</td>
+				</tr>
+				<tr>
+					<td>
+						?<=
+					</td>
+					<td>
+						Lookbehind Assertions
+					</td>
+				</tr>
+				<tr>
+					<td>
+						?!=
+					</td>
+					<td>
+						Negative lookbehind
+					</td>
+				</tr>
+				<tr>
+					<td>
+						?()
+					</td>
+					<td>
+						Kondition (If then)
+					</td>
+				</tr>
+				<tr>
+					<td>
+						?()|
+					</td>
+					<td>
+						Kondition (If then else)
+					</td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<!-- Special Characters -->
+		<div class="panel panel-default cheat-sheet-box">
+			<div class="panel-heading">
+				Spezielle Zeichen
+			</div>
+			<table class="table table-striped">
+				<tbody>
+				<tr>
+					<td>
+						\
+					</td>
+					<td>
+						Escapen eines Zeichens
+					</td>
+				</tr>
+				<tr>
+					<td>
+						\n
+					</td>
+					<td>
+						Neue Zeile
+					</td>
+				</tr>
+				<tr>
+					<td>
+						\r
+					</td>
+					<td>
+						Carriage Return
+					</td>
+				</tr>
+				<tr>
+					<td>
+						\t
+					</td>
+					<td>
+						Tab
+					</td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<!-- Pattern Modifier -->
+		<div class="panel panel-default cheat-sheet-box">
+			<div class="panel-heading">
+				Modifikation des Pattern
+			</div>
+			<table class="table table-striped">
+				<tbody>
+				<tr>
+					<td>
+						g
+					</td>
+					<td>
+						Globale Übereinstimmung
+					</td>
+				</tr>
+				<tr>
+					<td>
+						i
+					</td>
+					<td>
+						Case insensitive
+					</td>
+				</tr>
+				<tr>
+					<td>
+						m
+					</td>
+					<td>
+						Multiple Zeilen
+					</td>
+				</tr>
+				<tr>
+					<td>
+						s
+					</td>
+					<td>
+						String als einzelne Zeile behandeln
+					</td>
+				</tr>
+				<tr>
+					<td>
+						U
+					</td>
+					<td>
+						Ungreedy Pattern
+					</td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="clear"></div>
 	</section>
 	<hr>
 
-	<footer>
-		<p>&copy; Company 2014</p>
+	<footer class ="clear">
+		<p>&copy; FA12B</p>
 	</footer>
 </div> <!-- /container -->
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>-->
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="../js/bootstrap.min.js"></script>
 </body>
