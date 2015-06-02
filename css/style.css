@@ -20,7 +20,7 @@ body {
 
 .navbar-inverse .navbar-brand:focus, .navbar-inverse .navbar-brand:hover {
 	opacity: 0.7;
-	background-color: #7a4b7a;
+	background-color: #7A4B7A;
 }
 
 .navbar-nav {
@@ -31,7 +31,7 @@ body {
 
 .navbar-nav li:hover, .active {
 	opacity: 0.7;
-	background-color: #7a4b7a;
+	background-color: #7A4B7A;
 }
 
 .navbar a {
@@ -49,7 +49,7 @@ body {
 }
 
 .btn-primary:hover {
-	background-color: #7a4b7a;
+	background-color: #7A4B7A;
 	color: #fbffb5;
 }
 
@@ -59,9 +59,20 @@ body {
 	border-radius: 5px;
 }
 
+.cheat-sheet-box {
+	width: 200px;
+	float:left;
+	margin-right: 10px;
+	background-color: #FFFFFF;
+}
+
 hr {
 	border-color: #FBFFB5;
 	margin-bottom: 5px;
+}
+
+.clear {
+	clear: left;
 }
 
 footer {
@@ -87,7 +98,7 @@ footer {
 }
 
 #search-example-carousel .item .carousel-caption .content {
-	color: #7a4b7a;
+	color: #7A4B7A;
 	padding: 20px;
 	font-size: 20px;
 	text-shadow: none;
@@ -98,7 +109,7 @@ footer {
 }
 
 #search-example-carousel .carousel-control span {
-	color: #7a4b7a;
+	color: #7A4B7A;
 }
 
 #search-example-carousel .list-group {
