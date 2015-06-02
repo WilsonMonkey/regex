@@ -118,3 +118,47 @@ footer {
 	top: 0;
 	right: 0;
 }
+
+#history-carousel .carousel-indicators li {
+	background-color: #7A4B7A;
+}
+
+#history-carousel .carousel-indicators .active {
+	background-color: #FBFFB5;
+}
+
+#history-carousel .item.active {
+	opacity: 1;
+}
+
+#history-carousel .item .float {
+	float: left;
+}
+
+#history-carousel .item .carousel-caption {
+	top: 20px;
+}
+
+#history-carousel .item .carousel-caption div {
+	color: #FFFFFF;
+	padding: 70px;
+	text-align: center;
+	font-size: 20px;
+	text-shadow: none;
+	overflow: hidden;
+}
+
+#history-carousel .carousel-control {
+	background-image: none;
+}
+
+#history-carousel .carousel-control span {
+	color: #7A4B7A;
+}
+
+#history-carousel .list-group {
+	display: none;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
