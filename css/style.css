@@ -54,8 +54,8 @@ body {
 }
 
 .content {
-	background-color: #FBFFB5;
-	border: 3px solid #FBFFB5;
+	background-color: #FFFFFF;
+	border: 3px solid #FFFFFF;
 	border-radius: 5px;
 }
 
@@ -137,6 +137,26 @@ footer {
 
 #history-carousel .item .carousel-caption {
 	top: 20px;
+}
+
+.carousel-right {
+	float: right;
+}
+
+.carousel-lift {
+	float: left;
+}
+
+.carousel-image {
+	width: 300px;
+	height: 400px;
+	/*padding-left: 20px;*/
+	/*padding-bottom: 20px;*/
+	/*padding: 20px;*/
+}
+
+.carousel-padding {
+	padding: 20px;
 }
 
 #history-carousel .item .carousel-caption div {
