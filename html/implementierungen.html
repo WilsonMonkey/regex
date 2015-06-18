@@ -47,41 +47,58 @@
 </div>
 
 <div class="container">
-	<section class="content">
-		<div class="row">
-			<div class="col-xs-12">
-				<h2 class="text-center">POSIX vs PCRE</h2>
-				<div class="row">
-					<div class="col-xs-6">
-						<section class="content">
-							<h3 class="text-center">POSIX (Portable Operating System Interface):</h3>
-							<ul>
-								<li>aktuelle Version POSIX.1-2008 (with one TC)</li>
-								<li>find longest (best) match</li>
-								<li>IEEE Standard in Kombination mit der Unixgroup</li>
-								<li>Keine Bibliothek muss installiert werden</li>
-							</ul>
-						</section>
-					</div>
-					<div class="col-xs-6">
-						<section class="content">
-							<h3 class="text-center">PCRE (Perl Compatible Regular Expressions):</h3>
-							<ul>
-								<li>in C geschrieben</li>
-								<li>Standard ohne Unicode Unterstützung</li>
-								<li>Suchmuster muss durch Delimiters beschränkt werden</li>
-								<li>Keine case-sensitive Funktionen</li>
-							</ul>
-						</section>
-					</div>
+	<div class="row well">
+		<div class="col-xs-12 content">
+			<h2 class="text-center">POSIX vs PCRE</h2>
+			<div class="row">
+				<div class="col-xs-6">
+					<section>
+						<h3 class="text-center">POSIX (Portable Operating System Interface)</h3>
+						<ul>
+							<li>aktuelle Version POSIX.1-2008 (with one TC)</li>
+							<li>find longest (best) match</li>
+							<li>IEEE Standard in Kombination mit der Unixgroup</li>
+							<li>Keine Bibliothek muss installiert werden</li>
+						</ul>
+					</section>
+				</div>
+				<div class="col-xs-6">
+					<section>
+						<h3 class="text-center">PCRE (Perl Compatible Regular Expressions)</h3>
+						<ul>
+							<li>in C geschrieben</li>
+							<li>Standard ohne Unicode Unterstützung</li>
+							<li>Suchmuster muss durch Delimiters beschränkt werden</li>
+							<li>Keine case-sensitive Funktionen</li>
+						</ul>
+					</section>
 				</div>
 			</div>
 		</div>
-	</section>
+	</div>
+	<div class="row well">
+		<div class="col-xs-12 content">
+			<h2 class="text-center">Back references</h2>
+			<p>
+				Mit Hilfe vom backslashen und der Nummer einen match Gruppe kann der gleiche Reguläre Ausdruck mehrmals verwendet werden. 
+				<br>Beispielweise bei einem einer Prüfung von grey mit a oder e. Wenn dies mehrmals abgefragt werden soll muss man das nur einmal mit Hilfe der back referenxe den Regulären Ausdruck nur einmal schreiben
+				<br>Ein Weiterer sehr häufig Anwendungsfall ist das Prüfen HTML TAGS.
+				<br><code>(\w)a\1</code> Findet alle Werte wo der erste und 3 Buchstabe gleich sind und dazwischen sich ein "a" befindet.
+			</p>
+		</div>
+	</div>
+	<div class="row well">
+		<div class="col-xs-12 content">
+			<h2 class="text-center">lookback und lookbefore</h2>
+			<p>
+				Nach dem beenden der Suche wird vor oder hinter dem Suchtreffer eine weitere Suche vorgenommen, welche aber nicht in Suchmatch selber vorkommen muss.
+			</p>
+		</div>
+	</div>
 	<hr>
 
 	<footer>
-		<p>&copy; Company 2014</p>
+		<p>&copy; FA12B</p>
 	</footer>
 </div>
 

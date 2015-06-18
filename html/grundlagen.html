@@ -16,29 +16,27 @@
 	<!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="../js/bootstrap.min.js"></script>
 	<script type="text/javascript">
-	$(function() {
-		setCarouselHeight('#carousel-example');
+		$(function() {
+			setCarouselHeight('#carousel-example');
 		});
-    
-
-    function setCarouselHeight(id)
-    {
-        var slideHeight = [];
-        $(id+' .item').each(function()
-        {
-            // add all slide heights to an array
-            slideHeight.push($(this).height());
-        });
-
-        // find the tallest item
-        max = Math.max.apply(null, slideHeight);
-
-        // set the slide's height
-        $(id+' .carousel-content').each(function()
-        {
-            $(this).css('height',max+'px');
-        });
-    }</script>
+	    
+	
+	    function setCarouselHeight(id) {
+	        var slideHeight = [];
+	        $(id+' .item').each(function() {
+	            // add all slide heights to an array
+	            slideHeight.push($(this).height());
+	        });
+	
+	        // find the tallest item
+	        max = Math.max.apply(null, slideHeight);
+	
+	        // set the slide's height
+	        $(id+' .carousel-content').each(function() {
+	            $(this).css('height',max+'px');
+	        });
+	    };
+	</script>
 </head>
 <body>
 
@@ -85,17 +83,31 @@
 			<h2 class="well text-center">Allgemeines</h2>
 			
 			<!-- text slider https://technotarek.com/projects-and-tasks/text-bootstrap-carousel -->			
-	        <div id="carousel-example" class="carousel slide" data-ride="carousel" >
+	        <div id="carousel-example" class="carousel slide" data-ride="carousel" data-interval="">
             <!-- Wrapper for slides -->
             <div class="row">
                 <div class="col-xs-offset-3 col-xs-6">
                     <div class="carousel-inner">
-                        <div class="item">
+                    	<div class="item active">
+                            <div class="carousel-content content">
+                                <div>
+                                	<h2 class="text-center">Was sind Regex?</h2>
+                                	<div class="col-xs-12">
+	                                    <p>
+	                                    	Regex Kurzform für <mark>Reguläre Ausdrücke</mark>. Mit diese ist es möglich eine Zeichenkette schnell anhand von Suchkritierien (Regex) zu durchsuchen/filtern.
+											<br>
+											Textverarbeitungsprogramme, Betriebssysteme, und die meisten gängigen Programmiersprachen haben Regulare Ausdrücke Eigenschaften implementiert.
+										</p>
+	                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    	<div class="item">
                             <div class="carousel-content content">
                                 <div>
                                 	<h2 class="text-center">Geschichte</h2>
                                 	<div class="col-xs-6">
-                                		<img src="../img/Kleene.jpg" alt="Kleene" height="350px">
+                                		<img src="../img/Kleene.jpg" alt="Kleene" height="350">
                                 	</div>
                                 	<div class="col-xs-6">
 	                                	<h3>Stephen Cole Kleene</h3>
@@ -107,23 +119,20 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="item" style="">
+                        <div class="item">
                             <div class="carousel-content content">
                                 <div>
-                                    <h3>#2</h3>
-                                    <p>This is another much longer item. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, sint fuga temporibus nam saepe delectus expedita vitae magnam necessitatibus dolores tempore consequatur dicta cumque repellendus eligendi ducimus placeat! Sapiente, ducimus, voluptas, mollitia voluptatibus nemo explicabo sit blanditiis laborum dolore illum fuga veniam quae expedita libero accusamus quas harum ex numquam necessitatibus provident deleniti tenetur iusto officiis recusandae corporis culpa quaerat?</p>
+                                	<h2 class="text-center">Verwendung</h2>
+                                	<div class="col-xs-12">
+	                                    <p>
+	                                    	Nach fester syntaktischer Reihenfolge von Charakteren ist ein Regex zum Durchsuchen/Filtern einer Zeichenkette.
+											<br>
+											Pro Charakter der Suchstrings wird versucht das Filterkriterium anzulegen. Beim ersten match des Suchstrings auf den kompletten Regex, wird dieser zurückzugeben und die Suche wird beendet. Selbst wenn im späteren Text noch ein besserer bsp. speziferischen Treffer gibt.
+										</p>
+	                                </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="item active" style="">
-                            <div class="carousel-content content">
-                                <div>
-                                    <h3>#3</h3>                            
-                                    <p>This is the third item.</p>
-                                </div>
-                            </div>
-                        </div>
-                        
                     </div>
                 </div>
             </div>
@@ -136,248 +145,181 @@
         
         </div>
 
-			<div id="history-carousel" class="carousel slide hidden" data-ride="carousel" data-interval="50000">
+		</div>
+	</div>
+	<div class="row hidden">
+		<div class="col-xs-12">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title">Regex Vorgang</h3>
+				</div>
+				<div class="panel-body content">
+					Zuerst wird dem Regextool der Reguläre Ausdruck angegeben. Als Zweites wird der Target String
+					übergeben.
+					Im Regulären Ausdruck kennzeichnet der Delimiter den Anfang und das Ende. Dazwischen sind
+					entweder literalen sprich wörtlichen Charakter, Metacharakter und Operatoren mit denen der
+					Target String gefiltert werden soll. Wichtig ist dabei zu beachten das im Standard der erste
+					Suchtreffer zurückgeben wird egal ob nachfolgende vielleicht noch besser auf der Suchkriterium
+					passen würden.
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-12">
+			<h2 class="well text-center">Ablauf der Suche</h2>
+
+			<div id="search-example-carousel" class="carousel slide" data-ride="carousel">
 				<!-- Indicators -->
 				<ol class="carousel-indicators">
-					<li data-target="#history-carousel" data-slide-to="0" class="active"></li>
-					<li data-target="#history-carousel" data-slide-to="1"></li>
-					<li data-target="#history-carousel" data-slide-to="2"></li>
-					<li data-target="#history-carousel" data-slide-to="3"></li>
-					<li data-target="#history-carousel" data-slide-to="4"></li>
-					<!--<li data-target="#history-carousel" data-slide-to="5"></li>-->
-					<!--<li data-target="#history-carousel" data-slide-to="6"></li>-->
-					<!--<li data-target="#history-carousel" data-slide-to="7"></li>-->
-					<!--<li data-target="#history-carousel" data-slide-to="8"></li>-->
-					<!--<li data-target="#history-carousel" data-slide-to="9"></li>-->
-					<!--<li data-target="#history-carousel" data-slide-to="10"></li>-->
+					<li data-target="#search-example-carousel" data-slide-to="0" class="active"></li>
+					<li data-target="#search-example-carousel" data-slide-to="1"></li>
+					<li data-target="#search-example-carousel" data-slide-to="2"></li>
+					<li data-target="#search-example-carousel" data-slide-to="3"></li>
+					<li data-target="#search-example-carousel" data-slide-to="4"></li>
+					<li data-target="#search-example-carousel" data-slide-to="5"></li>
+					<li data-target="#search-example-carousel" data-slide-to="6"></li>
+					<li data-target="#search-example-carousel" data-slide-to="7"></li>
+					<li data-target="#search-example-carousel" data-slide-to="8"></li>
+					<li data-target="#search-example-carousel" data-slide-to="9"></li>
+					<li data-target="#search-example-carousel" data-slide-to="10"></li>
 				</ol>
 				<!-- Wrapper for slides -->
 				<div class="carousel-inner" role="listbox">
 					<div class="item active">
-						<div class="row">
-							<div class="col-sm-3 col-xs-6"><img src="../img/Kleene.jpg" alt="search1"
-																class="carousel-image carousel-padding"/>
-
-								<div class="carousel-caption">Stephen Cole Kleene</div>
-							</div>
-							<div class="col-xs-6 carousel-right">
-								<div class="carousel-caption">
-								<span class="carousel-padding">Begriff geht auf den Mathematiker Stephen Cole Kleene
-									zurück (reguläre Mengen). Kleene gilt als Begründer der theoretische Informatik</span>
-								</div>
-							</div>
+						<img src="../img/search1.png" alt="search1">
+						<div class="carousel-caption">
+							<span class="content">Ersten Suchcharakter prüfen</span>
 						</div>
 					</div>
 					<div class="item">
-						<div class="row">
-							<div class="col-xs-6">
-								<div class="carousel-caption">
-									<span class="carousel-padding">Lorum Ipsum</span>
-								</div>
-							</div>
-							<div class="col-sm-3 col-xs-6 carousel-right"><img src="../img/Kleene.jpg" alt="search1"
-																class="carousel-image carousel-padding"/>
-
-								<div class="carousel-caption">Stephen Cole Kleene</div>
-							</div>
+						<img src="../img/search2.png" alt="search2">
+						<div class="carousel-caption">
+							<span class="content">Erster Suchcharakter nicht in Pattern</span>
 						</div>
 					</div>
 					<div class="item">
-						<div class="row">
-							<div class="col-sm-3 col-xs-6"><img src="../img/Kleene.jpg" alt="search1"
-																class="carousel-image carousel-padding"/>
-
-								<div class="carousel-caption">Stephen Cole Kleene</div>
-							</div>
-							<div class="col-xs-6 carousel-right">
-								<div class="carousel-caption">
-									<span class="carousel-padding">Test1</span>
-								</div>
-							</div>
+						<img src="../img/search3.png" alt="search3">
+						<div class="carousel-caption">
+							<span class="content">Zweiter Suchcharakter prüfen</span>
 						</div>
 					</div>
 					<div class="item">
-						<div class="row">
-							<div class="col-sm-3 col-xs-6"><img src="../img/Kleene.jpg" alt="search1"
-																class="carousel-image carousel-padding"/>
-
-								<div class="carousel-caption">Stephen Cole Kleene</div>
-							</div>
-							<div class="col-xs-6 carousel-right">
-								<div class="carousel-caption">
-									<span class="carousel-padding">Test2</span>
-								</div>
-							</div>
+						<img src="../img/search4.png" alt="search4">
+						<div class="carousel-caption">
+							<span class="content">Zweiter Suchcharakter nicht in Pattern</span>
 						</div>
 					</div>
-					<ul class="list-group col-sm-4">
-						<li class="list-group-item active"><a href="#" data-target="#history-carousel"
-															  data-slide-to="0"><h4>Schritt 1</h4></a></li>
-						<li class="list-group-item"><a href="#" data-target="#history-carousel"
-													   data-slide-to="1"><h4>Schritt 2</h4></a></li>
-						<li class="list-group-item"><a href="#" data-target="#history-carousel"
-													   data-slide-to="2"><h4>Schritt 3</h4></a></li>
-						<li class="list-group-item"><a href="#" data-target="#history-carousel"
-													   data-slide-to="3"><h4>Schritt 4</h4></a></li>
-					</ul>
-					<div class="controls">
-						<a class="left carousel-control" href="#history-carousel" role="button" data-slide="prev">
-							<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-							<span class="sr-only">Previous</span>
-						</a>
-						<a class="right carousel-control" href="#history-carousel" role="button" data-slide="next">
-							<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-							<span class="sr-only">Next</span>
-						</a>
+					<div class="item">
+						<img src="../img/search5.png" alt="search5">
+						<div class="carousel-caption">
+							<span class="content">Dritter Suchcharakter prüfen</span>
+						</div>
 					</div>
+					<div class="item">
+						<img src="../img/search6.png" alt="search6">
+						<div class="carousel-caption">
+							<span class="content">Dritter Suchcharakter im erster Match vom Pattern</span>
+						</div>
+					</div>
+					<div class="item">
+						<img src="../img/search7.png" alt="search7">
+						<div class="carousel-caption">
+							<span class="content">Vierter Suchcharakter prüfen</span>
+						</div>
+					</div>
+					<div class="item">
+						<img src="../img/search8.png" alt="search8">
+						<div class="carousel-caption">
+							<span class="content">Vierter Suchcharakter zweiter Match vom Pattern</span>
+						</div>
+					</div>
+					<div class="item">
+						<img src="../img/search9.png" alt="search9">
+						<div class="carousel-caption">
+							<span class="content">Fünfter Suchcharakter prüfen</span>
+						</div>
+					</div>
+					<div class="item">
+						<img src="../img/search10.png" alt="search9">
+						<div class="carousel-caption">
+							<span class="content">Fünfter Suchcharakter dritter Match vom Pattern<br> Resultat Zurückgeben</span>
+						</div>
+					</div>
+				</div>
+
+				<!-- Indicators -->
+				<ul class="list-group col-sm-4">
+					<li class="list-group-item active">
+						<a href="#" data-target="#search-example-carousel" data-slide-to="0">
+							<h4>Schritt 1</h4>
+						</a>
+					</li>
+					<li class="list-group-item">
+						<a href="#" data-target="#search-example-carousel"
+												   data-slide-to="1"><h4>Schritt 2</h4></a></li>
+					<li class="list-group-item">
+						<a href="#" data-target="#search-example-carousel" data-slide-to="2">
+							<h4>Schritt 3</h4>
+						</a>
+					</li>
+					<li class="list-group-item">
+						<a href="#" data-target="#search-example-carousel" data-slide-to="3">
+							<h4>Schritt 4</h4>
+						</a>
+					</li>
+					<li class="list-group-item">
+						<a href="#" data-target="#search-example-carousel" data-slide-to="4">
+							<h4>Schritt 5</h4>
+						</a>
+					</li>
+					<li class="list-group-item">
+						<a href="#" data-target="#search-example-carousel" data-slide-to="5">
+							<h4>Schritt 6</h4>
+						</a>
+					</li>
+					<li class="list-group-item">
+						<a href="#" data-target="#search-example-carousel" data-slide-to="6">
+							<h4>Schritt 7</h4>
+						</a>
+					</li>
+					<li class="list-group-item">
+						<a href="#" data-target="#search-example-carousel" data-slide-to="7">
+							<h4>Schritt 8</h4>
+						</a>
+					</li>
+					<li class="list-group-item">
+						<a href="#" data-target="#search-example-carousel" data-slide-to="8">
+							<h4>Schritt 9</h4>
+						</a>
+					</li>
+					<li class="list-group-item">
+						<a href="#" data-target="#search-example-carousel" data-slide-to="9">
+							<h4>Schritt 10</h4>
+						</a>
+					</li>
+				</ul>
+
+				<!-- Controls -->
+				<div class="controls">
+					<a class="left carousel-control" href="#search-example-carousel" role="button"
+					   data-slide="prev">
+						<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+						<span class="sr-only">Previous</span>
+					</a>
+					<a class="right carousel-control" href="#search-example-carousel" role="button"
+					   data-slide="next">
+						<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+						<span class="sr-only">Next</span>
+					</a>
 				</div>
 			</div>
 		</div>
-		<div class="row">
-			<div class="col-xs-12">
-				<div class="panel panel-default">
-					<div class="panel-heading">
-						<h3 class="panel-title">Regex Vorgang</h3>
-					</div>
-					<div class="panel-body content">
-						Zuerst wird dem Regextool der Reguläre Ausdruck angegeben. Als Zweites wird der Target String
-						übergeben.
-						Im Regulären Ausdruck kennzeichnet der Delimiter den Anfang und das Ende. Dazwischen sind
-						entweder literalen sprich wörtlichen Charakter, Metacharakter und Operatoren mit denen der
-						Target String gefiltert werden soll. Wichtig ist dabei zu beachten das im Standard der erste
-						Suchtreffer zurückgeben wird egal ob nachfolgende vielleicht noch besser auf der Suchkriterium
-						passen würden.
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-xs-12">
-				<h2 class="well text-center">Ablauf der Suche</h2>
-
-				<div id="search-example-carousel" class="carousel slide" data-ride="carousel">
-					<!-- Indicators -->
-					<ol class="carousel-indicators">
-						<li data-target="#search-example-carousel" data-slide-to="0" class="active"></li>
-						<li data-target="#search-example-carousel" data-slide-to="1"></li>
-						<li data-target="#search-example-carousel" data-slide-to="2"></li>
-						<li data-target="#search-example-carousel" data-slide-to="3"></li>
-						<li data-target="#search-example-carousel" data-slide-to="4"></li>
-						<li data-target="#search-example-carousel" data-slide-to="5"></li>
-						<li data-target="#search-example-carousel" data-slide-to="6"></li>
-						<li data-target="#search-example-carousel" data-slide-to="7"></li>
-						<li data-target="#search-example-carousel" data-slide-to="8"></li>
-						<li data-target="#search-example-carousel" data-slide-to="9"></li>
-						<li data-target="#search-example-carousel" data-slide-to="10"></li>
-					</ol>
-					<!-- Wrapper for slides -->
-					<div class="carousel-inner" role="listbox">
-						<div class="item active">
-							<img src="../img/search1.png" alt="search1">
-
-							<div class="carousel-caption"><span class="content">Ersten Suchcharakter prüfen</span></div>
-						</div>
-						<div class="item">
-							<img src="../img/search2.png" alt="search2">
-
-							<div class="carousel-caption"><span
-								class="content">Erster Suchcharakter nicht in Pattern</span></div>
-						</div>
-						<div class="item">
-							<img src="../img/search3.png" alt="search3">
-
-							<div class="carousel-caption"><span class="content">Zweiter Suchcharakter prüfen</span>
-							</div>
-						</div>
-						<div class="item">
-							<img src="../img/search4.png" alt="search4">
-
-							<div class="carousel-caption"><span
-								class="content">Zweiter Suchcharakter nicht in Pattern</span></div>
-						</div>
-						<div class="item">
-							<img src="../img/search5.png" alt="search5">
-
-							<div class="carousel-caption"><span class="content">Dritter Suchcharakter prüfen</span>
-							</div>
-						</div>
-						<div class="item">
-							<img src="../img/search6.png" alt="search6">
-
-							<div class="carousel-caption"><span class="content">Dritter Suchcharakter im erster Match vom Pattern</span>
-							</div>
-						</div>
-						<div class="item">
-							<img src="../img/search7.png" alt="search7">
-
-							<div class="carousel-caption"><span class="content">Vierter Suchcharakter prüfen</span>
-							</div>
-						</div>
-						<div class="item">
-							<img src="../img/search8.png" alt="search8">
-
-							<div class="carousel-caption"><span class="content">Vierter Suchcharakter zweiter Match vom Pattern</span>
-							</div>
-						</div>
-						<div class="item">
-							<img src="../img/search9.png" alt="search9">
-
-							<div class="carousel-caption"><span class="content">Fünfter Suchcharakter prüfen</span>
-							</div>
-						</div>
-						<div class="item">
-							<img src="../img/search10.png" alt="search9">
-
-							<div class="carousel-caption"><span class="content">Fünfter Suchcharakter dritter Match vom Pattern<br> Resultat Zurückgeben</span>
-							</div>
-						</div>
-					</div>
-
-					<!-- Indicators -->
-					<ul class="list-group col-sm-4">
-						<li class="list-group-item active"><a href="#" data-target="#search-example-carousel"
-															  data-slide-to="0"><h4>Schritt 1</h4></a></li>
-						<li class="list-group-item"><a href="#" data-target="#search-example-carousel"
-													   data-slide-to="1"><h4>Schritt 2</h4></a></li>
-						<li class="list-group-item"><a href="#" data-target="#search-example-carousel"
-													   data-slide-to="2"><h4>Schritt 3</h4></a></li>
-						<li class="list-group-item"><a href="#" data-target="#search-example-carousel"
-													   data-slide-to="3"><h4>Schritt 4</h4></a></li>
-						<li class="list-group-item"><a href="#" data-target="#search-example-carousel"
-													   data-slide-to="4"><h4>Schritt 5</h4></a></li>
-						<li class="list-group-item"><a href="#" data-target="#search-example-carousel"
-													   data-slide-to="5"><h4>Schritt 6</h4></a></li>
-						<li class="list-group-item"><a href="#" data-target="#search-example-carousel"
-													   data-slide-to="6"><h4>Schritt 7</h4></a></li>
-						<li class="list-group-item"><a href="#" data-target="#search-example-carousel"
-													   data-slide-to="7"><h4>Schritt 8</h4></a></li>
-						<li class="list-group-item"><a href="#" data-target="#search-example-carousel"
-													   data-slide-to="8"><h4>Schritt 9</h4></a></li>
-						<li class="list-group-item"><a href="#" data-target="#search-example-carousel"
-													   data-slide-to="9"><h4>Schritt 10</h4></a></li>
-					</ul>
-
-					<!-- Controls -->
-					<div class="controls">
-						<a class="left carousel-control" href="#search-example-carousel" role="button"
-						   data-slide="prev">
-							<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-							<span class="sr-only">Previous</span>
-						</a>
-						<a class="right carousel-control" href="#search-example-carousel" role="button"
-						   data-slide="next">
-							<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-							<span class="sr-only">Next</span>
-						</a>
-					</div>
-				</div>
-			</div>
-		</div>
-		<hr>
-		<footer>
-			<p>&copy; FA12B</p>
-		</footer>
 	</div>
+	<hr>
+	<footer>
+		<p>&copy; FA12B</p>
+	</footer>
 
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
